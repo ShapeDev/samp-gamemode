@@ -30,12 +30,8 @@ DialogResponse:DialogGender(playerid,response,listitem,inputtext[])
 {
 	#pragma unused listitem
 	#pragma unused inputtext
-	if(response)
-	{
-		player_data[playerid][Gender] = response;
-		api_RegisterPlayer(playerid);
-	} else {
-		Kick(playerid);
-	}
+
+	player_data[playerid][Gender] = response;
+	api_RegisterPlayer(playerid);
 	return 1;
 }
